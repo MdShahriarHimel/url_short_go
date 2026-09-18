@@ -1,0 +1,9 @@
+services:
+  url-shortener:
+    build: .
+    ports:
+      - "3001:3001"
+    environment:
+      - DOCKER_ENV=true
+    env_file:
+      - ./.env
