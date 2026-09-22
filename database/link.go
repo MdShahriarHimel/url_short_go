@@ -88,7 +88,7 @@ func (link *Link) Delete() bool {
 
 func (link *Link) GetLongUrl() (string, bool) {
 	for i := range linkList {
-		if link.UserId == linkList[i].UserId && link.ShortCode == linkList[i].ShortCode {
+		if link.ShortCode == linkList[i].ShortCode {
 			return linkList[i].LongUrl, true
 		}
 	}

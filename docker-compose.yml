@@ -2,7 +2,7 @@ services:
   url-shortener:
     build: .
     ports:
-      - "3001:3001"
+      - "9999:9999"
     environment:
       - DOCKER_ENV=true
     env_file:

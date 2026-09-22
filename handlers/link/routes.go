@@ -49,7 +49,7 @@ func (h *Handler) RegisterRoutes(mux *http.ServeMux, manager middleware.Manager)
 	mux.Handle(
 		"GET /{short_code}",
 		manager.AppendMiddleWare(
-			[]middleware.MiddleWare{middleware.AuthJwt},
+			nil,
 			http.HandlerFunc(h.Redirect),
 		),
 	)
